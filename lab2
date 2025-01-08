@@ -10,8 +10,8 @@ ssh-keygen -t rsa
 #Run from control node, below is the example, please make sure you provide your user,and ip address
 ssh-copy-id -i mykey.pub ubuntu2@192.168.74.133
 ssh -i mykey ubuntu2@192.168.74.133
-#Create one more inventory file, inventory1.ini
+#Create one more inventory file, inventory2.ini
 [remote]
-192.168.111.131 ansible_connection=ssh ansible_user=amit ansible_ssh_private_key_file=/home/amit/learninggit/remote
+192.168.74.133 ansible_connection=ssh ansible_user=ubuntu2 ansible_ssh_private_key_file=/home/ubuntu1/pmrepo/mykey
 #run following command
-ansible -i inventory1.ini remote -m ping
+ansible -i inventory2.ini remote -m ping
